@@ -1,0 +1,43 @@
+@startuml
+
+package "org.example" {
+
+  class Student {
+    - String name
+    - int creditHours
+    - int qualityPoints
+    - static double gpaThreshold
+    + Student(String name, int creditHours, int qualityPoints)
+    + double gpa()
+    + boolean eligibleForHonorSociety()
+    + static void setGpaThreshold(double threshold)
+    + static double getGpaThreshold()
+  }
+
+  class Graduate {
+    - String degree
+    + Graduate(String name, int creditHours, int qualityPoints, String degree)
+    + boolean eligibleForHonorSociety()
+  }
+
+  class Undergraduate {
+    - String year
+    + Undergraduate(String name, int creditHours, int qualityPoints, String year)
+    + boolean eligibleForHonorSociety()
+  }
+
+  class Project2 {
+    - ArrayList<Student> students
+    - double totalGPA
+    + static void main(String[] args)
+  }
+
+  Student <|-- Graduate
+  Student <|-- Undergraduate
+  Project2 --> Student : Uses >
+  Project2 --> Graduate : Uses >
+  Project2 --> Undergraduate : Uses >
+
+}
+
+@enduml

@@ -1,0 +1,7 @@
+Brown,William 72 230 Junior
+Johnson,Mary 21 77 Masters
+Jones,Sally 32 95 Sophomore
+Smith,John 45 150 Senior
+Williams,Emily 15 50 Freshman
+Davis,Michael 36 125 Doctorate
+
